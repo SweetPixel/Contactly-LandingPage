@@ -1,0 +1,30 @@
+/* CSS declarations go here */
+
+html{
+	height: 100%;
+}
+
+body{
+
+	background-color: #208EBC;
+	background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#208EBC), to(#208EBC), color-stop(.5,#43AEDB));
+	background: -moz-linear-gradient(top, #208EBC 0%, #43AEDB 50%, #208EBC 100%);
+	padding-top: 100px;
+}
+
+
+h1,h2,h3,h4{
+	font-family: 'Telex',sans-serif;
+	/*font-size: 75px;*/
+	color: #FFFFFF;
+	/*text-align: center;*/
+}
+
+.centered {
+  position: fixed;
+  /*top: 20%;*/
+  left: 50%;
+  /*margin-top: -50px;*/
+  margin-left: -100px;
+  text-align: center;
+}
