@@ -28,3 +28,16 @@ h1,h2,h3,h4{
   margin-left: -100px;
   text-align: center;
 }
+
+
+.well{
+	background-color: rgba(135, 184, 205, 0.6);
+	border: none;
+}
+
+#awesome{
+	background-image: url("./icons.png");
+	background-repeat: no-repeat;
+	background-size: 75%;
+	background-position: center;
+}

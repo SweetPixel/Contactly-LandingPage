@@ -9,20 +9,62 @@
 	<!-- Optimized mobile viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-
 <body>
-	<div class="centered container">
-		<div class="row">
-			<h1>Contactly</h1>
-		</div>
-		<div class="row">
-			<h2>Your contacts with a whole new experience.</h2>
+	<div class="container">
+		<div class="row-fluid">
+			<div class="span9">
+				<div class="row">
+					<h1>Contactly</h1>
+					<h2>Your contacts with a whole new experience.</h2>
+				</div>
+				<div id="awesome" class="row">
+					<div class="well">
+						{{> main }}
+					</div>
+				</div>
+			</div>
+			<div class="span3">
+				<img src="./contactly-phone.png" alt="phone"/>
+			</div>
 		</div>
 	</div>
 </body>
-
 <template name="hello">
 	<h1>Hello World!</h1>
 	{{greeting}}
 	<input type="button" value="Click" />
 </template>
+
+<template name = "main">
+	{{#if showAdmin}}
+	{{> admin}}
+	{{else}}
+	{{> signup}}
+	{{/if}}
+</template>
+<template name = "signup">
+	{{#if emailSubmitted }}
+	<h3>Thanks for signing up!</h3>
+	{{else }}
+		<form class="form-inline">
+			{{#if showBadEmail}}
+			{{> badEmail}}
+			{{/if}}
+			<!-- <div class="input-append"> -->
+				<input placeholder="Enter your email address" type="text" class="" id="email">
+				<button type="submit" class="btn btn-success">Notify Me</button>
+			<!-- </div> -->
+			{{/if}}
+		</form>
+
+
+	</template>
+	<template name = "admin">
+		<h1>Signed up Customers</h1>
+		<table>
+			<tr><th>Customer Email</th><th>Referrer</th><th>Time</th></tr>
+			{{#each emails}}
+			<tr><td>{{ this.email }}</td><td>{{ this.referrer }}</td><td>{{ this.timestamp }}</td></tr>
+			{{/each }}
+		</table>
+	</template>
