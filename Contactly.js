@@ -40,15 +40,6 @@ if (Meteor.isClient) {
   Template.signup.emailSubmitted = function(){
     return Session.get("emailSubmitted");
   };
-
-  Template.footer.isAdmin = function(){
-    return isAdmin(Meteor.userId())
-  };
-
-  Template.admin.emails = function(){
-    return Emails.find().fetch();
-  };
-
 }
 
 if (Meteor.isServer) {

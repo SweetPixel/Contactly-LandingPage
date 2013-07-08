@@ -22,13 +22,13 @@
 						{{> main }}
 						<div class="row-fluid">
 							<div class="span3">
-								<a href="#"><img src="./facebook.png" alt="facebook"/></a>
+								<a href="http://www.facebook.com/share.php?u=http%3A%2F%2www.contactly.co&title=Check out Contactly"><img src="./facebook.png" alt="facebook"/></a>
 							</div>
 							<div class="span3">
-								<a href="#"><img src="./share.png" alt="facebook"/></a>
+								<a href=""><img src="./share.png" alt="facebook"/></a>
 							</div>
 							<div class="span3">
-								<a href="#"><img src="./twitter.png" alt="facebook"/></a>
+								<a href="http://twitter.com/home?status=Checkout Contactly+http%3A%2F%2www.contactly.co"><img src="./twitter.png" alt="facebook"/></a>
 							</div>
 						</div>
 					</div>
@@ -37,9 +37,6 @@
 			<div class="span3">
 				<img src="./contactly-phone.png" alt="phone"/>
 			</div>
-		</div>
-		<div class="row footer">
-			{{> footer }}
 		</div>
 	</div>
 </body>
@@ -54,7 +51,11 @@
 
 <template name = "signup">
 	{{#if emailSubmitted }}
-	<h3>Thanks for signing up!</h3>
+	<div class="alert alert-success">
+		<button type="button" class="close" data-dismiss="alert">&times;</button>
+		<h4>Thank you!</h4>
+		<p>We really appreciate you signing up. We will let you know once the app goes live</p>
+	</div>
 	{{else }}
 	<form class="form-inline">
 		{{#if showBadEmail}}
@@ -77,4 +78,11 @@
 		<tr><td>{{ this.email }}</td><td>{{ this.referrer }}</td><td>{{ this.timestamp }}</td></tr>
 		{{/each }}
 	</table>
+</template>
+<template name="badEmail">
+	<div class="alert alert-error">
+		<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+		<h4>:(</h4>
+		<p>Please enter your email address. Every time you enter a wrong email addres the Terrorists win.</p>
+	</div>
 </template>
