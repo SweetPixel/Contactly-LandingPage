@@ -8,22 +8,26 @@
 	<link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
 	<!-- Optimized mobile viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-	<div class="container">
-		<div class="row-fluid">
-			<div class="span9">
-				<div class="row">
-					<h1>Contactly</h1>
-					<h2>Your contacts with a whole new experience.</h2>
-				</div>
-				<div id="awesome" class="row">
-					<div class="well">
-						{{> main }}
-						<div class="row-fluid">
-							<div class="span3">
-								<a href="http://www.facebook.com/share.php?u=http%3A%2F%2www.contactly.co&title=Check out Contactly"><img src="./facebook.png" alt="facebook"/></a>
-							</div>
+	<!-- start Mixpanel --><script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
+		typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
+		b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
+		mixpanel.init("24e8fe82eda85f4b4ccf1b49c49fde3a");</script><!-- end Mixpanel -->
+	</head>
+	<body>
+		<div class="container">
+			<div class="row-fluid">
+				<div class="span9">
+					<div class="row">
+						<h1>Contactly</h1>
+						<h2>Your contacts with a whole new experience.</h2>
+					</div>
+					<div id="awesome" class="row">
+						<div class="well">
+							{{> main }}
+							<div class="row-fluid">
+								<div class="span3">
+									<a href="http://www.facebook.com/share.php?u=http%3A%2F%2www.contactly.co&title=Check out Contactly"><img src="./facebook.png" alt="facebook"/></a>
+								</div>
 <!-- 							<div class="span3">
 								<a href=""><img src="./share.png" alt="facebook"/></a>
 							</div> -->

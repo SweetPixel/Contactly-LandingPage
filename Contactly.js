@@ -24,6 +24,7 @@ if (Meteor.isClient) {
         Session.get("showBadEmail",false);
         Meteor.call("sendEmail","ali@sweetpixelstudios.com",email,"A new signup","Hello "+email+" would like to signup.");
         Session.set("emailSubmitted",true);
+        mixpanel.track("User Signup");
       }
       else
       {
