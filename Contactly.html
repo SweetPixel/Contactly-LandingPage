@@ -10,89 +10,85 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
+	<!-- <div class="wrapper"> -->
+	<div class="ribbon-wrapper-green"><div class="ribbon-green">Coming Soon</div></div>
+	<!-- </div> -->
 	<div class="container">
-		<div class="row-fluid">
-			<div class="span9">
-				<div class="row">
-					<h1>Contactly</h1>
-					<h2>Your contacts with a whole new experience.</h2>
-				</div>
-				<div id="awesome" class="row">
-					<div class="well">
-						{{> main }}
-						<div class="row-fluid">
-							<div class="span6">
-								<a href="http://www.facebook.com/Contactly"><img src="./facebook.png" alt="facebook"/></a>
-							</div>
-<!-- 							<div class="span3">
-								<a href="#myModal" data-toggle="modal"><img src="./share.png" alt="facebook"/></a>
-							</div> -->
-							<div class="span6">
-								<a href="http://twitter.com/ItsContactly"><img src="./twitter.png" alt="facebook"/></a>
-							</div>
-						</div>
-					</div>
+		<div class="row text-center">
+			<h1>Contactly</h1>
+			<h2>Your contacts with a whole new experience.</h2>
+		</div>
+		<div class="row">
+			<div class="centered" id="awesome">
+				<div class="well">
+					{{> main }}
+					<!-- <div class="span6"> -->
+						<a href="http://www.facebook.com/contactly">
+							<img src="./facebook.png" alt="fb"/>
+						</a>
+					<!-- </div> -->
+					<!-- <div class="span6"> -->
+						<a href="http://www.twitter.com/ItsContactly">
+							<img src="./twitter.png" alt="twitter"/>
+						</a>
+					<!-- </div> -->
 				</div>
 			</div>
-			<div class="span3">
-				<img src="./contactly-phone.png" alt="phone"/>
+		</div>
+		<!-- Modal -->
+<!-- 		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="myModalLabel">Tell your friends about contactly.</h3>
 			</div>
-		</div>
-	</div>
-	<!-- Modal -->
-	<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-		<div class="modal-header">
-			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-			<h3 id="myModalLabel">Tell your friends about contactly.</h3>
-		</div>
-		<div class="modal-body">
-			<a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out Contactly, a new experience to interact with your phone contacts." data-via="ItsContactly" data-size="large" data-related="SweetPixlStdios" data-hashtags="Contactly">Tweet</a>
-			<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
-		</div>
-		<div class="modal-footer">
-			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
-		</div>
-	</div>
-</body>
-<template name = "main">
-	{{> signup}}
-</template>
+			<div class="modal-body">
+				<a href="https://twitter.com/share" class="twitter-share-button" data-text="Check out Contactly, a new experience to interact with your phone contacts." data-via="ItsContactly" data-size="large" data-related="SweetPixlStdios" data-hashtags="Contactly">Tweet</a>
+				<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div> -->
+		</div> 
+	</body>
+	<template name = "main">
+		{{> signup}}
+	</template>
 
 
-<template name = "signup">
-	{{#if emailSubmitted }}
-	<div class="alert alert-success">
-		<button type="button" class="close" data-dismiss="alert">&times;</button>
-		<h4>Thank you!</h4>
-		<p>We really appreciate you signing up. We will let you know once the app goes live</p>
-	</div>
-	{{else }}
-	<form class="form-inline">
-		{{#if showBadEmail}}
-		{{> badEmail}}
-		{{/if}}
-		<!-- <div class="input-append"> -->
-		<input placeholder="Enter your email address" type="text" class="" id="email">
-		<button type="submit" class="btn btn-success">Notify Me</button>
-		<!-- </div> -->
-		{{/if}}
-	</form>
+	<template name = "signup">
+		{{#if emailSubmitted }}
+		<div class="alert alert-success">
+			<button type="button" class="close" data-dismiss="alert">&times;</button>
+			<h4>Thank you!</h4>
+			<p>We really appreciate you signing up. We will let you know once the app goes live</p>
+		</div>
+		{{else }}
+		<form class="form-inline">
+			{{#if showBadEmail}}
+			{{> badEmail}}
+			{{/if}}
+			<div class="input-append">
+				<input placeholder="Enter your email address" type="text" class="" id="email">
+				<button type="submit" class="btn btn-success">Notify Me</button>
+			</div>
+			{{/if}}
+		</form>
 
 
-</template>
-<template name = "admin">
-	<h1>Signed up Customers</h1>
-	<table>
-		<tr><th>Customer Email</th><th>Referrer</th><th>Time</th></tr>
-		{{#each emails}}
-		<tr><td>{{ this.email }}</td><td>{{ this.referrer }}</td><td>{{ this.timestamp }}</td></tr>
-		{{/each }}
-	</table>
-</template>
-<template name="badEmail">
-	<div class="alert alert-error">
-		<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
-		<h4>:(</h4>
-		<p>Please enter your email address. Every time you enter a wrong email addres the Terrorists win.</p>
-	</div>
-</template>
+	</template>
+	<template name = "admin">
+		<h1>Signed up Customers</h1>
+		<table>
+			<tr><th>Customer Email</th><th>Referrer</th><th>Time</th></tr>
+			{{#each emails}}
+			<tr><td>{{ this.email }}</td><td>{{ this.referrer }}</td><td>{{ this.timestamp }}</td></tr>
+			{{/each }}
+		</table>
+	</template>
+	<template name="badEmail">
+		<div class="alert alert-error">
+			<!-- <button type="button" class="close" data-dismiss="alert">&times;</button> -->
+			<h4>:(</h4>
+			<p>Please enter your email address. Every time you enter a wrong email addres the Terrorists win.</p>
+		</div>
+	</template>
