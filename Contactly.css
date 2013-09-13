@@ -53,6 +53,37 @@ h2{
 	width:100%;
 }
 
+
+.input-append{
+	padding-right: 100px;
+}
+
+button.button-link {
+  /*height:55px;*/
+  /*width:61px;*/
+  margin-top:15px;
+  padding:14px 25px 14px 25px;
+  /*display: inline-block;*/
+  /*-webkit-border-radius: 5px;
+  -moz-border-radius: 5px;*/
+  border-radius: 0 5px 5px 0;
+  background-color:#5BE7CC;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 17px;
+  text-decoration: none;
+  text-shadow: none;
+  /*border-color:#5BE7CC;*/
+  border: 1px solid #5BE7CC;
+  color:#000;
+  text-decoration:none;
+}
+
+#email{
+	margin-top:15px;
+	padding:15px 30px 15px 30px;
+	font-size: 17px;
+}
+
 /*#awesome{
 	background-image: url("./icons.png");
 	background-repeat: no-repeat;
