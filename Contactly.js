@@ -40,6 +40,8 @@ if (Meteor.isClient) {
   Template.signup.emailSubmitted = function(){
     return Session.get("emailSubmitted");
   };
+
+  
 }
 
 if (Meteor.isServer) {

@@ -5,34 +5,42 @@
 	<meta name="description" content="Managing your contacts is about to get easier." />
 	<meta name="author" content="SweetPixel Studios">
 	<meta name="keywords" content="" />
-	<link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'>
+	<!-- <link href='http://fonts.googleapis.com/css?family=Telex' rel='stylesheet' type='text/css'> -->
+	<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300" rel="stylesheet" type="text/css">
 	<!-- Optimized mobile viewport -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <body>
 	{{> setup }}
 	<!-- <div class="wrapper"> -->
-	<div class="ribbon-wrapper-green"><div class="ribbon-green">Coming Soon</div></div>
+	<!-- <div class="ribbon-wrapper-green"><div class="ribbon-green">Coming Soon</div></div> -->
 	<!-- </div> -->
 	<div class="container">
 		<div class="row text-center">
 			<h1>Contactly</h1>
-			<h2>Your contacts with a whole new experience.</h2>
+			<h2>Your mobile contacts with a whole new experience.</h2>
 		</div>
 		<div class="row">
 			<div class="centered" id="awesome">
 				<div class="well">
 					{{> main }}
-					<!-- <div class="span6"> -->
+
+					<div id="navcontainer">
+						<ul>
+							<li class="facebook-icon"><a href="http://www.facebook.com/contactly"><img src="./facebook.png" alt="fb"/></a></li>
+							<li><a href="http://www.twitter.com/ItsContactly"><img src="./twitter.png" alt="twitter"/></a></li>
+						</ul>
+					</div>
+					<!-- <div id="facebook-logo">
 						<a href="http://www.facebook.com/contactly">
 							<img src="./facebook.png" alt="fb"/>
 						</a>
-					<!-- </div> -->
-					<!-- <div class="span6"> -->
+					</div>
+					<div id="twitter-logo">
 						<a href="http://www.twitter.com/ItsContactly">
 							<img src="./twitter.png" alt="twitter"/>
 						</a>
-					<!-- </div> -->
+					</div> -->
 				</div>
 			</div>
 		</div>
